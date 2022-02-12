@@ -28,7 +28,7 @@ from builtins import staticmethod
 import nptdms
 
 # TDMS_Packages.TDMSEnums is a custom package containing customized Enum objects used on the workflow herein.
-import TDMS_Packages.TDMSEnums as TDMSE
+import own_packages.TDMS_Packages.TDMSEnums as TDMSE
 
 # TDMS_Packages.MathTools is a custom package containing customaized mathematical functions.
 import Math_Tools.MathTools as mt
