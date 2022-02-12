@@ -31,7 +31,7 @@ import nptdms
 import own_packages.TDMS_Packages.TDMSEnums as TDMSE
 
 # TDMS_Packages.MathTools is a custom package containing customaized mathematical functions.
-import Math_Tools.MathTools as mt
+import own_packages.Math_Tools.MathTools as mt
 
 # The library dataclasses implements the functionality of the dataclass decorator, which is used to create C#-like
 # structs.
