@@ -47,5 +47,108 @@ La información pertinente a la protocolización de los distintos ensayos y medi
 
 Por el momento, la fase inicial del proyecto de colaboración consistirá en analizar las series temporales de las distribuciones x'-c<sub>p</sub> obtenidas para distintos valores de &alpha; y Re en la configuración limpia con el perfil limpio (sin equipar con elementos de rugosidad discretos).
 
-<!---[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/azarketa/Post-procesamiento-datos-tesis.git/HEAD)--->
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/azarketa/Post-procesamiento-datos-tesis.git/main?urlpath=tree%2Fpost-proc.ipynb)
+<h2>Estructura de ficheros y directorios en el repositorio</h2>
+
+La estructura de ficheros y directorios en el repositorio puede subdividirse en tres bloques:
+<ol>
+  <li>El primer bloque consta de:
+    <ol>
+      <li>Éste fichero <i>LEEME.md</i>, que es un fichero informativo acerca de qué es y cómo se emplea el repositorio.</li>
+      <li>El fichero <i>post-proc.ipynb</i>, que es un fichero de IPython Notebook interactivo. La interactividad se obtiene por medio de <a href=https://mybinder.org/><i>binder</i></a>, un proyecto abierto que tiene por objetivo facilitar la intercambiabilidad de código (sobre todo Python, aunque no exclusivamente) a través de un servidor <i>JupyterHub</i> que aloja el repositorio mismo. Para que el fichero <i>post-proc.ipync</i> pueda ejecutarse correctamente, hace falta especificarle a <i>binder</i> el tipo de dependencias que tiene el código del Notebook; es decir, hay que indicarle qué tipo de módulos de Python ha de instalar a la hora de configurar el servidor de <i>JupyterHub</i>. Estas dependencias se especifican en el fichero <i>requirements.txt</i> que, en principio, no habrá de modificarse.</li>
+      <li>Por último, está el directorio "oculto" <i>.ipynb_checkpoints</i>, que incluye los ficheros de trazabilidad de los cambios que se realizan el el Notebook <i>post-proc.ipynb</i>. Toda vez que se realizan cambios en el Notebook y se guardan, los ficheros en <i>.ipynb_checkpoints</i> se modifican para dar cuenta de ese cambio, y permiten revertir dichos cambios en caso necesario. Es un directorio que, en principio, no habrá de modificarse.</li>
+    </ol>
+  </li>
+  <li>El segundo bloque consta de:
+    <ol>
+      <li>El directorio <i>own_packages</i> que incluye los módulos de Python propios que son necesarios para ejecutar el código del fichero <i>post-proc.ipynb</i>. Dentro del directorio hay otros dos subdirectorios:
+        <ol>
+          <li>El subdirectorio <i>Math_Tools</i>, que incluye el módulo <i>MathTools.py</i>.</li>
+          <li>El subdirectorio <i>TDMS_packages</i>, que incluye los módulos <i>TDMSClasses.py</i> y <i>TDMSEnums.py</i>.</li>
+        </ol>
+        Hay más información acerca de estos módulos en la documentación correspondiente al Notebook, dentro del fichero <i>post-proc.ipynb</i>. De todas formas, estos módulos Python no habrán de modificarse.
+      </li>
+    </ol>
+  </li>
+  <li>El tercer bloque consta de:
+    <ol>
+      <li>El directorio raíz, <i>Exp_data</i>, que incluye los datos experimentales en crudo obtenidos en el túnel de viento. La estructura de <i>Exp_data</i> es la siguiente, donde lo incluido hasta ahora se resalta debidamente:
+        <ul>
+          <li>- [x] Clean_config
+            <ul>
+              <li>- [x] Bare_airfoil
+                <ul>
+                  <li>- [ ] cl_cd</li>
+                  <li>- [x] cp</li>
+                </ul>
+              </li>
+              <li>- [ ] Roughened_airfoil
+                <ul>
+                  <li>- [ ] cl_cd</li>
+                  <li>- [ ] cp</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>- [ ] Turb_config
+            <ul>
+              <li>- [ ] Bare_airfoil
+                <ul>
+                  <li>- [ ] cl_cd</li>
+                  <li>- [ ] cp</li>
+                </ul>
+              </li>
+              <li>- [ ] Roughened_airfoil
+                <ul>
+                  <li>- [ ] cl_cd</li>
+                  <li>- [ ] cp</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>- [ ] Rough_config
+            <ul>
+              <li>- [ ] Bare_airfoil
+                <ul>
+                  <li>- [ ] cl_cd</li>
+                  <li>- [ ] cp</li>
+                </ul>
+              </li>
+              <li>- [ ] Roughened_airfoil
+                <ul>
+                  <li>- [ ] cl_cd</li>
+                  <li>- [ ] cp</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>- [ ] Real_config
+            <ul>
+              <li>- [ ] Bare_airfoil
+                <ul>
+                  <li>- [ ] cl_cd</li>
+                  <li>- [ ] cp</li>
+                </ul>
+              </li>
+              <li>- [ ] Roughened_airfoil
+                <ul>
+                  <li>- [ ] cl_cd</li>
+                  <li>- [ ] cp</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+<h2>Notebook <i>post-proc.ipynb</i> en modo interactivo</h2>
+
+Tal y como se ha mencionado, el proyecto <i>binder</i> permite intercambiar código de forma interactiva. Para poder ver la funcionalidad del código de post-procesado, por tanto, no hace falta tener instalado ninguna distribución de Python ni clonar el repositorio. Es suficiente con clicar en cualquiera de los dos insignias (<i>badges</i>) siguientes.
+
+Esta insignia es para abrir el Notebook <i>post-proc.ipynb</i> en formato interactivo: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/azarketa/Post-procesamiento-datos-tesis.git/main?urlpath=tree%2Fpost-proc.ipynb)
+
+Esta insignia para abrir la instancia raíz del servidor <i>JupyterHub</i>: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/azarketa/Post-procesamiento-datos-tesis.git/HEAD)
+
+Téngase en cuenta que, debido a dependencias y al peso que tiene el código, las instancias de <i>binder</i> pueden llevar cierto tiempo de configuración y lanzamiento. Una vez que se ha visto la funcionalidad del código y se quieran realizar más cambios, es conveniente clonar el repositorio y trabajar en el equipo local.
