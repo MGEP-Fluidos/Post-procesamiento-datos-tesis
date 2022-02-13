@@ -1,3 +1,7 @@
+[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
+
+[![Made withJupyter](https://img.shields.io/badge/Made%20with-Jupyter-orange?style=for-the-badge&logo=Jupyter)](https://jupyter.org/try)
+
 <h1>Post-procesamiento-datos-tesis</h1>
 
 Los ficheros que se incluyen en este repositorio son para llevar a cabo un primer proyecto de colaboración MGEP/UPM-ETSIAE centrado en analizar los datos experimentales obtenidos mediante medidas en túnel de viento sobre un perfil NACA0021 en distintas configuraciones fluidas.
